@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cxmvdxon6kvtn" path="res://Assets/PipeTankA.png" id="3_mxy2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjuro"]
-size = Vector2(46, 477)
+size = Vector2(41, 471)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kerov"]
-size = Vector2(47, 444)
+size = Vector2(41, 444)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cady"]
 size = Vector2(20, 146)
@@ -26,13 +26,13 @@ scale = Vector2(0.482737, 2.80154)
 texture = ExtResource("2_gp2pm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopPipe"]
-position = Vector2(-4.37121e-08, -1.5)
+position = Vector2(2.5, 1.5)
 shape = SubResource("RectangleShape2D_fjuro")
 
 [node name="BottomPipe" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomPipe"]
-position = Vector2(-0.5, 285)
+position = Vector2(1.5, 285)
 shape = SubResource("RectangleShape2D_kerov")
 
 [node name="BottomPipeSprite" type="Sprite2D" parent="BottomPipe"]

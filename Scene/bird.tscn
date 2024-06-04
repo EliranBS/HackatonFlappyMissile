@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ddoy1yyaphsee" path="res://Assets/missilePicture.png" id="2_h2g8b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q700l"]
-radius = 6.0051
-height = 50.4367
+radius = 12.4521
+height = 62.7535
 
 [sub_resource type="Animation" id="Animation_dne58"]
 resource_name = "flap_wings"
@@ -53,11 +53,13 @@ script = ExtResource("1_ngkor")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_h2g8b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -3)
+position = Vector2(2, -2)
 rotation = 0.959931
+scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_q700l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -5,7 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://x218sp1de1n0" path="res://Assets/gameover.png" id="3_wrxua"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7k0i"]
-bg_color = Color(0.94902, 0.564706, 0, 0.568627)
+bg_color = Color(0, 0, 0, 0.709804)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 7
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_fawne")
@@ -47,7 +52,7 @@ size_flags_vertical = 4
 texture = ExtResource("3_wrxua")
 
 [node name="Panel" type="Panel" parent="MarginContainer/GameOverBox"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -75,5 +80,16 @@ theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("1_37paw")
 theme_override_font_sizes/font_size = 32
 text = "Restart"
+
+[node name="LevelUpLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_37paw")
+theme_override_font_sizes/font_size = 30
+text = "1"
 
 [connection signal="pressed" from="MarginContainer/GameOverBox/Panel/MarginContainer/RestartButton" to="." method="_on_restart_button_pressed"]
