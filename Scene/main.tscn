@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://btp1ibsk4b7xt"]
+[gd_scene load_steps=9 format=3 uid="uid://btp1ibsk4b7xt"]
 
 [ext_resource type="PackedScene" uid="uid://dtilpyyc3gkh2" path="res://Scene/bird.tscn" id="1_5nf66"]
 [ext_resource type="Script" path="res://Scene/GameManager.gd" id="1_ww3ei"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/pipe_spawner.gd" id="3_kjkin"]
 [ext_resource type="PackedScene" uid="uid://3o0d528vtdwf" path="res://Scene/fade.tscn" id="6_binhv"]
 [ext_resource type="PackedScene" uid="uid://dtsfutbumtxem" path="res://Scene/UI.tscn" id="7_u8p8e"]
+[ext_resource type="Script" path="res://Scripts/misslie_spawner.gd" id="8_nvhjd"]
 
 [node name="main" type="Node"]
 
@@ -38,3 +39,6 @@ position = Vector2(1, 200)
 [node name="Fade" parent="." instance=ExtResource("6_binhv")]
 
 [node name="UI" parent="." instance=ExtResource("7_u8p8e")]
+
+[node name="Misslie" type="Node" parent="."]
+script = ExtResource("8_nvhjd")

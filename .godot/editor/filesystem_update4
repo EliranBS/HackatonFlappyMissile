@@ -4,5 +4,8 @@ res://Scene/pipe_pair.tscn
 res://Scene/ground.tscn
 res://Scene/fade.tscn
 res://Scene/UI.tscn
-res://Scene/UI.gd
+res://Scene/Misslie.tscn
+res://Scene/Misslie.gd
 res://Scene/GameManager.gd
+res://Scene/pipe_pair.gd
+res://Scripts/misslie_spawner.gd
