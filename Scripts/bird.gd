@@ -59,6 +59,7 @@ func rotate_bird():
 
 func kill():
 	should_process_input = false
+	$explosion.play()
 	
 func stop():
 	animation_player.stop()

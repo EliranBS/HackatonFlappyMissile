@@ -7,6 +7,7 @@ class_name UI
 @onready var level_up_label = $MarginContainer/LevelUpLabel
 
 func _ready():
+	#$AudioStreamPlayer2D.play()
 	points_label.text = "%d" % 0
 	level_up_label.text = "Level "+"%d" % 1
 	
@@ -15,6 +16,7 @@ func update_points(points: int):
 
 func on_game_over():
 	game_over_box.visible = true
+	
 
 
 func _on_restart_button_pressed():

@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 AnimationPlayer
 Label
 MarginContainer
@@ -11,4 +12,3 @@ CanvasLayer
 ColorRect
 Node
 VisibleOnScreenNotifier2D
-Sprite2D

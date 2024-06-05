@@ -36,6 +36,7 @@ func end_game():
 func point_scored():
 	points += 1
 	ui.update_points(points)
+	$points_sound.play()
 	
 	if points % 5 == 0:
 		current_level += 1
