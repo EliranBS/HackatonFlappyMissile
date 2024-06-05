@@ -4,5 +4,6 @@ res://Scene/pipe_pair.tscn
 res://Scene/ground.tscn
 res://Scene/fade.tscn
 res://Scene/UI.tscn
-res://Scene/UI.gd
+res://Scripts/bird.gd
 res://Scene/GameManager.gd
+res://Scene/pipe_pair.gd

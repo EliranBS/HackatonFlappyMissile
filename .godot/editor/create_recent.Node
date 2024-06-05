@@ -1,3 +1,4 @@
+AnimationPlayer
 Label
 MarginContainer
 Button
@@ -7,7 +8,6 @@ TextureRect
 CollisionShape2D
 Area2D
 CanvasLayer
-AnimationPlayer
 ColorRect
 Node
 VisibleOnScreenNotifier2D

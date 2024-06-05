@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtilpyyc3gkh2"]
+[gd_scene load_steps=11 format=3 uid="uid://dtilpyyc3gkh2"]
 
 [ext_resource type="Script" path="res://Scripts/bird.gd" id="1_ngkor"]
 [ext_resource type="Texture2D" uid="uid://ddoy1yyaphsee" path="res://Assets/missilePicture.png" id="2_h2g8b"]
+[ext_resource type="Texture2D" uid="uid://4gs1dx60b6n4" path="res://Assets/missilePicture2.png" id="3_8ay8s"]
+[ext_resource type="Texture2D" uid="uid://bo5n5nhvsrd2q" path="res://Assets/missilePicture3.png" id="4_udmfh"]
+[ext_resource type="Texture2D" uid="uid://jhc7saxx8oxs" path="res://Assets/missilePictureGas.png" id="5_5ohjf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q700l"]
 radius = 12.4521
@@ -21,7 +24,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("2_h2g8b"), ExtResource("2_h2g8b"), ExtResource("2_h2g8b")]
+"values": [ExtResource("2_h2g8b"), ExtResource("3_8ay8s"), ExtResource("4_udmfh")]
 }
 
 [sub_resource type="Animation" id="Animation_1kly1"]
@@ -40,14 +43,29 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -10)]
 }
 
+[sub_resource type="Animation" id="Animation_exkhh"]
+resource_name = "gas"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("5_5ohjf"), ExtResource("5_5ohjf")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_khapi"]
 _data = {
 "flap_wings": SubResource("Animation_dne58"),
+"gas": SubResource("Animation_exkhh"),
 "idle": SubResource("Animation_1kly1")
 }
 
 [node name="Bird" type="CharacterBody2D"]
-position = Vector2(0, -10)
 motion_mode = 1
 script = ExtResource("1_ngkor")
 
