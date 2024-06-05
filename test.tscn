@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ryqo2qspkr2"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_f5xpl"]
+[ext_resource type="Texture2D" uid="uid://bgcvs1i46ilch" path="res://Assets/GazaBack.jpg" id="2_82xto"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_f5xpl")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(181, 276)
+texture = ExtResource("2_82xto")

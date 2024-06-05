@@ -11,23 +11,32 @@
 
 [node name="main" type="Node"]
 
-[node name="GazaBack" type="Node2D" parent="."]
-position = Vector2(1822, 2)
-scale = Vector2(1.612, 1.318)
+[node name="gaza" type="Sprite2D" parent="."]
+position = Vector2(614, -2.71706)
+scale = Vector2(1.78418, 1.31765)
+texture = ExtResource("2_ikmsq")
 script = ExtResource("2_n251x")
-
-[node name="gaza" type="Sprite2D" parent="GazaBack"]
-position = Vector2(-913.462, -2.27618)
-scale = Vector2(0.784521, 0.999735)
-texture = ExtResource("2_ikmsq")
-
-[node name="gaza2" type="Sprite2D" parent="GazaBack"]
-position = Vector2(0.00012207, -1.51745)
-texture = ExtResource("2_ikmsq")
-flip_h = true
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_ww3ei")
+
+[node name="ScrollBack" type="Node2D" parent="."]
+visible = false
+
+[node name="Gaza" type="Sprite2D" parent="ScrollBack"]
+visible = false
+position = Vector2(370, -56.75)
+scale = Vector2(1.00391, 1.01928)
+texture = ExtResource("2_ikmsq")
+
+[node name="World" type="Node" parent="."]
+
+[node name="Background" type="Sprite2D" parent="World"]
+visible = false
+texture_filter = 1
+position = Vector2(369, -82)
+scale = Vector2(0.999023, 1.23522)
+texture = ExtResource("2_ikmsq")
 
 [node name="PipeSpawner" type="Node" parent="."]
 script = ExtResource("3_kjkin")

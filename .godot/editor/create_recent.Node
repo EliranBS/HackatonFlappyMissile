@@ -1,3 +1,10 @@
+Node2D
+SubViewport
+Sprite2D
+ParallaxLayer
+ParallaxBackground
+Camera2D
+AnimatedSprite2D
 Label
 MarginContainer
 Button
@@ -5,10 +12,3 @@ VBoxContainer
 Panel
 TextureRect
 CollisionShape2D
-Area2D
-CanvasLayer
-AnimationPlayer
-ColorRect
-Node
-VisibleOnScreenNotifier2D
-Sprite2D
