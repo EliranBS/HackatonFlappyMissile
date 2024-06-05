@@ -1,43 +1,39 @@
-
-[gd_scene load_steps=11 format=3 uid="uid://btp1ibsk4b7xt"]
+[gd_scene load_steps=9 format=3 uid="uid://btp1ibsk4b7xt"]
 
 [ext_resource type="PackedScene" uid="uid://dtilpyyc3gkh2" path="res://Scene/bird.tscn" id="1_5nf66"]
 [ext_resource type="Script" path="res://Scene/GameManager.gd" id="1_ww3ei"]
+[ext_resource type="Script" path="res://Scene/background.gd" id="2_25v8s"]
 [ext_resource type="Texture2D" uid="uid://bgcvs1i46ilch" path="res://Assets/GazaBack.jpg" id="2_ikmsq"]
-[ext_resource type="Script" path="res://Scene/gaza.gd" id="2_n251x"]
 [ext_resource type="PackedScene" uid="uid://cd7m1vf4tvbf5" path="res://Scene/ground.tscn" id="2_r6kxm"]
 [ext_resource type="Script" path="res://Scripts/pipe_spawner.gd" id="3_kjkin"]
-[ext_resource type="AudioStream" uid="uid://c3focm3jkwg1l" path="res://Assets/explosion_sound.mp3" id="5_6pq15"]
 [ext_resource type="PackedScene" uid="uid://3o0d528vtdwf" path="res://Scene/fade.tscn" id="6_binhv"]
 [ext_resource type="PackedScene" uid="uid://dtsfutbumtxem" path="res://Scene/UI.tscn" id="7_u8p8e"]
-[ext_resource type="AudioStream" uid="uid://goj676yhsrvv" path="res://Assets/background_music.ogg" id="8_80xs0"]
-[ext_resource type="AudioStream" uid="uid://lwldokysjnxs" path="res://Assets/points_sound.mp3" id="10_vuk3i"]
 
 [node name="main" type="Node"]
 
-[node name="GazaBack" type="Node2D" parent="."]
-position = Vector2(1822, 2)
-scale = Vector2(1.612, 1.318)
-script = ExtResource("2_n251x")
-
-[node name="gaza" type="Sprite2D" parent="GazaBack"]
-position = Vector2(-913.462, -2.27618)
-scale = Vector2(0.784521, 0.999735)
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(1610, -349)
+scale = Vector2(3.46528, 2.80273)
 texture = ExtResource("2_ikmsq")
-
-[node name="gaza2" type="Sprite2D" parent="GazaBack"]
-position = Vector2(0.00012207, -1.51745)
-texture = ExtResource("2_ikmsq")
-flip_h = true
+script = ExtResource("2_25v8s")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_ww3ei")
 
+[node name="ScrollBack" type="Node2D" parent="."]
+visible = false
+
+[node name="Gaza" type="Sprite2D" parent="ScrollBack"]
+position = Vector2(370, -56.75)
+scale = Vector2(1.00391, 1.01928)
+texture = ExtResource("2_ikmsq")
+
 [node name="World" type="Node" parent="."]
 
 [node name="Background" type="Sprite2D" parent="World"]
+visible = false
 texture_filter = 1
-position = Vector2(-0.5, -45.75)
+position = Vector2(369, -82)
 scale = Vector2(0.999023, 1.23522)
 texture = ExtResource("2_ikmsq")
 
@@ -49,18 +45,13 @@ wait_time = 2.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 
 [node name="Bird" parent="." instance=ExtResource("1_5nf66")]
 
-[node name="explosion" type="AudioStreamPlayer2D" parent="Bird"]
-stream = ExtResource("5_6pq15")
-
 [node name="Ground" parent="." instance=ExtResource("2_r6kxm")]
-position = Vector2(-68, 203)
+position = Vector2(1, 200)
 
 [node name="Fade" parent="." instance=ExtResource("6_binhv")]
 
 [node name="UI" parent="." instance=ExtResource("7_u8p8e")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI"]
-stream = ExtResource("8_80xs0")
