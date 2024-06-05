@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl0ojojhnkgdy"]
+
+[ext_resource type="Texture2D" uid="uid://ddoy1yyaphsee" path="res://Assets/missilePicture.png" id="1_stoeh"]
+[ext_resource type="Script" path="res://Scripts/missile.gd" id="2_vnxq1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3qeei"]
+radius = 12.0
+height = 62.0
+
+[node name="Missile" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+rotation = -2.57436
+texture = ExtResource("1_stoeh")
+script = ExtResource("2_vnxq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, 0)
+rotation = 1.5708
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_3qeei")
