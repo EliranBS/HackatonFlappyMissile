@@ -21,6 +21,6 @@ func _process(delta):
 	#bird_entered.emit()
 
 
-#func _on_area_2d_body_entered(body):
-	#pass
- 	#bird_entered.emit()
+func _on_area_2d_body_entered(body):
+	bird_entered.emit()
+	print("entered!!!")

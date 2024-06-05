@@ -27,18 +27,18 @@ func stop_misslie_spawning():
 		#(pipe as PipePair).speed = 0
 		
 func _spawn_misslie():
-		var misslie = misslie_scene.instantiate() as Misslies
-		add_child(misslie)
-		
-		var viewport_rect = get_viewport().get_camera_2d().get_viewport_rect()
-		var half_height = viewport_rect.size.y / 2
-		misslie.position.x = viewport_rect.end.x
-		misslie.position.y = randf_range(viewport_rect.size.y * 0.15 - half_height, viewport_rect.size.y * 0.65 - half_height)
-		
-		#misslie.bird_entered.connect(on_area_2d_body_entered)
-
-func _body_entered(body):
+	var misslie = misslie_scene.instantiate() as Misslies
+	add_child(misslie)
+	
+	var viewport_rect = get_viewport().get_camera_2d().get_viewport_rect()
+	var half_height = viewport_rect.size.y / 2
+	misslie.position.x = viewport_rect.end.x
+	misslie.position.y = randf_range(viewport_rect.size.y * 0.15 - half_height, viewport_rect.size.y * 0.65 - half_height)
+	misslie.bird_entered.connect(on_bird_entered)
+	
+func on_bird_entered():
 	bird_crashed.emit()
-	(body as Bird).stop()
+	stop_misslie_spawning()
+		
 	
 

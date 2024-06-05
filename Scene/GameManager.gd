@@ -47,11 +47,14 @@ func point_scored():
 		bird.gravity = bird.gravity * 1.3
 		start_new_level(bird.gravity, current_level, points)
 
+
 func start_new_level(new_gravity, new_level, points):
 	bird.gravity = new_gravity
 	points = points
 	ui.update_points(points)
 	ui.show_level_up_message(new_level)
+
+
 
 #func start_misslie_spawning():
 	#misslie_timer = Timer.new()
@@ -74,3 +77,5 @@ func start_new_level(new_gravity, new_level, points):
 		#misslie.position.x = viewport_rect.end.x
 		#misslie.position.y = randf_range(viewport_rect.size.y * 0.15 - half_height, viewport_rect.size.y * 0.65 - half_height)
 		#add_child(misslie)
+
+
