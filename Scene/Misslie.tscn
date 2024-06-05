@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b06r83i0b3xqu"]
+
+[ext_resource type="Script" path="res://Scene/Misslie.gd" id="1_h0yrh"]
+[ext_resource type="Texture2D" uid="uid://ddoy1yyaphsee" path="res://Assets/missilePicture.png" id="1_wbwq6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cph5g"]
+radius = 11.0
+height = 60.0
+
+[node name="Misslie" type="Node2D"]
+script = ExtResource("1_h0yrh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+z_index = 10
+rotation = -2.57436
+texture = ExtResource("1_wbwq6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cph5g")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
