@@ -7,6 +7,7 @@ class_name UI
 @onready var level_up_label = $MarginContainer/LevelUpLabel
 
 func _ready():
+	$AudioStreamPlayer2D.play()
 	points_label.text = "%d" % 0
 	level_up_label.text = "Level "+"%d" % 1
 	
