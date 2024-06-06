@@ -1,9 +1,9 @@
+Node2D
 AudioStreamPlayer2D
 Node
 Area2D
 CollisionShape2D
 Sprite2D
-Node2D
 Label
 MarginContainer
 Button
@@ -12,4 +12,3 @@ Panel
 TextureRect
 CanvasLayer
 AnimationPlayer
-ColorRect
